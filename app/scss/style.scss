@@ -54,6 +54,7 @@ html{
 	width: 100%;
 	position: fixed;
 	background-color: #fff;
+	z-index: 10;
 	.header__wrapper{
 		height: 90px;
 		display: flex;
@@ -62,17 +63,7 @@ html{
 		width: 100%;
 		
 	}
-	.logo{
-		font-family: 'Montserrat', sans-serif;
-		font-size: 24px;
-		font-weight: 600;
-	}
-	.logo-orange{
-		color: $orange;
-	}
-	.logo-blue{
-		color: $blue;
-	}
+	
 	.menu-burger{
 		display: none;
 	}
@@ -103,7 +94,17 @@ html{
 		color: $orange;
 	}
 }
-
+.logo{
+		font-family: 'Montserrat', sans-serif;
+		font-size: 24px;
+		font-weight: 600;
+	}
+	.logo-orange{
+		color: $orange;
+	}
+	.logo-blue{
+		color: $blue;
+	}
 //-------------------------First Screen-----------------------
 .header-screen{
 	padding-top: 90px;
@@ -177,10 +178,11 @@ html{
 .screen-image{
 	width: 700px;
 	img{
-		width: 100%;
+		max-width: 100%;
+		height: auto;
 	}
 }
-.order{
+.order, .skupka{
 			padding: 15px 45px;
 			background-color: $orange;
 			color: #fff;
@@ -221,7 +223,8 @@ h2{
 .about-image{
 	width: 30%;
 	img{
-		width: 100%;
+		max-width: 100%;
+		height: auto;
 	}
 }
 .about-more__info{
@@ -261,6 +264,7 @@ h2{
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
+	padding-bottom: 120px;
 	.advantages-left{
 		width: 50%;
 		padding-right: 30px;
@@ -271,6 +275,10 @@ h2{
 	}
 	.advantages-image{
 		margin-top: 60px;
+		img{
+			max-width: 100%;
+			height: auto;
+		}
 	}
 	.advantages-item{
 		padding: 20px;
@@ -287,4 +295,113 @@ h2{
 			margin: 0;
 		}
 	}
+	.advantages-item:nth-child(even){
+		border: 2px solid $orange;
+	}
+}
+//-------------howitworks----------------
+.howitworks-title{
+	color: $black;
+	text-align: center;
+}
+.howitworks__wrapper{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding-top: 100px;
+}
+.howitworks-item{
+	width: 230px;
+	text-align: center;
+	.howitworks-number{
+		font-family: 'Montserrat', sans-serif;
+		font-size: 30px;
+		font-weight: 600;
+		padding: 20px;
+		background-color: $lblue;
+		width: 60px;
+		border-radius: 50%;
+		margin: 0 auto;
+		margin-bottom: 90px;
+	}
+	.arrow-right{
+		position: relative;
+		&::after{
+			position: absolute;
+			content: "";
+			top: -70px;
+			left: 85px;
+			width: 236px;
+			height: 52px;
+			background-image: url('../images/Arrow-up.png');
+		}
+	}
+	.arrow-left{
+		position: relative;
+		&::after{
+			position: absolute;
+			content: "";
+			top: 75px;
+			left: 85px;
+			width: 236px;
+			height: 52px;
+			background-image: url('../images/Arrow-down.png');
+		}
+	}
+}
+//-------------------skupka-form----------------------
+.skupka-form__wrapper{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	input, textarea{
+		width: 320px;
+		padding: 14px;
+		color: #999999;
+		border: none;
+		border-radius: 5px;
+		display: block;
+		margin-bottom: 15px;
+		background-color: none;
+		outline: none;
+	}
+	textarea{
+		width: 100%;
+		height: 100px;
+		margin-bottom: 25px;
+	}
+	.skupka-form-image{
+		width: 50%;
+		img{
+			width: auto;
+			height: 100%;
+		}
+	}
+}
+
+.skupka-form-data__wrapper{
+	width: 640px;
+}
+.skupka-form-data{
+	padding: 80px 30px;
+	background-color: $lblue;
+	width: 50%;
+}
+.skupka{
+	border: none;
+	cursor: pointer;
+}
+//------------------------FOOTER---------------------
+.footer{
+	padding: 90px 0;
+	background-color: $blue;
+}
+.footer__wrapper{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	color: #DFDFDF;
+}
+.note{
+	height: 50px;
 }
