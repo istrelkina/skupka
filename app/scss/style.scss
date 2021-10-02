@@ -120,8 +120,10 @@ html{
 	color: #fff;
 	display: flex;
 	justify-content: end;
+	padding-bottom: 130px;
 	.blue-screen-right{
 		width: 640px;
+		
 		h1{
 			font-family: 'Montserrat', sans-serif;
 			font-size: 60px;
@@ -129,12 +131,36 @@ html{
 			width: 570px;
 			line-height: 150%;
 			margin-top: 120px;
+			margin-bottom: 50px;
 		}
 		.screen-list li{
 			font-family: 'Montserrat', sans-serif;
 			font-size: 30px;
 			font-weight: 600;
-			margin-bottom: 20px;
+			margin-bottom: 30px;
+			margin-left: 40px;
+			position: relative;
+			&::before{
+				content: "";
+				position: absolute;
+				top: 0;
+				left: -36px;
+				width: 24px;
+				height: 24px;
+				background: url('../images/check.svg') 0 0 no-repeat;
+
+			}
+		}
+		.screen-list{
+			margin-bottom: 50px;
+		}
+		
+		.readmore{
+			padding: 15px 45px;
+			color: #fff;
+			border: 1px solid #fff;
+			border-radius: 5px;
+			margin-left: 30px;
 		}
 	}
 	
@@ -142,4 +168,123 @@ html{
 .lblue-screen{
 	width: 50%;
 	background-color: $lblue;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	padding-bottom: 120px;
+}
+.screen-image{
+	width: 700px;
+	img{
+		width: 100%;
+	}
+}
+.order{
+			padding: 15px 45px;
+			background-color: $orange;
+			color: #fff;
+			border-radius: 5px;
+		}
+//----------------------ABOUT--------------------------
+h2{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 30px;
+	font-weight: 600;
+	line-height: 130%;
+}
+.about{
+	padding: 120px 0;
+}
+.about__wrapper{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	.about-left{
+		width: 50%;
+	}
+	
+	.about-right{
+		padding-left: 60px;
+		width: 50%;
+	}
+}
+.about-text{
+	margin-top: 20px;
+}
+.about-more__wrapper{
+	margin-top: 70px;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+.about-image{
+	width: 30%;
+	img{
+		width: 100%;
+	}
+}
+.about-more__info{
+	padding-left: 90px;
+	width: 70%;
+}
+//------------------------whatbuy---------------------
+.whatbuy{
+	padding: 120px 0 40px 0;
+	background-image: url('../images/whatbuy-bg.jpg');
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	.whatbuy-title{
+		color: #fff;
+		margin-bottom: 50px;
+		text-align: center;
+	}
+	.items{
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	.item{
+		margin-bottom: 80px;
+	}
+	.item-center{
+		margin: 0 130px;
+	}
+}
+
+//----------------------advantages------------------------
+.advantages{
+	padding: 120px 0;
+}
+.advantages__wrapper{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	.advantages-left{
+		width: 50%;
+		padding-right: 30px;
+	}
+	.advantages-right{
+		width: 50%;
+		padding-left: 30px;
+	}
+	.advantages-image{
+		margin-top: 60px;
+	}
+	.advantages-item{
+		padding: 20px;
+		border: 2px solid $blue;
+		border-radius: 5px;
+		margin-bottom: 20px;
+		h3{
+			font-family: 'Montserrat', sans-serif;
+			font-size: 24px;
+			font-weight: 500;
+			margin: 0 0 15px 0;
+		}
+		p{
+			margin: 0;
+		}
+	}
 }
