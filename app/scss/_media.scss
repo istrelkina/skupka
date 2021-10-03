@@ -1,0 +1,261 @@
+@media(max-width: 1366px){
+	.screen-image img{
+		 height: auto;
+	    width: calc((100vw / 2) - 50px);
+	}
+	.blue-screen .blue-screen-right{
+		padding-left: 20px;
+	}
+	.skupka-form-data__wrapper {
+	    width: 100%;
+	}
+}
+@media(max-width: 1255px){
+	.blue-screen .blue-screen-right h1{
+		font-size: 50px;
+		width: auto;
+	}
+	
+	.blue-screen .blue-screen-right .screen-list li {
+		font-size: 24px;
+	}
+	.blue-screen .blue-screen-right{
+		width: 100%;
+	}
+	.whatbuy .item-center {
+		margin: 0 10px;
+	}
+}
+
+@media(max-width: 1170px){
+	.header__phone{
+		display: none;
+	}
+	.about__wrapper .about-right{
+		width: 60%;
+	}
+	.about__wrapper .about-left{
+		width: 40%;
+	}
+	.about-more__info {
+	    padding-left: 30px;
+	    
+	}
+	.advantages__wrapper .advantages-left {
+   	 padding-right: 10px;
+	}
+	.howitworks-item .arrow-right,
+	.howitworks-item .arrow-left {
+		&::after{
+			background-image: none;
+		}
+	}
+	.howitworks__wrapper{
+		padding-top: 50px;
+	}
+	.howitworks-item .howitworks-number {
+		margin-bottom: 15px;
+	}
+}
+@media(min-width: 1001px){
+	.header .menu-burger{
+		display: flex;
+	}
+}
+@media(max-width: 1000px){
+	.header .menu-burger{
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 20px;
+		&::before,
+		&::after{
+			content: "";
+			position: absolute;
+			background-color:$black;
+			width: 100%;
+			height: 2px;
+			left: 0;
+			transition: all .3s;
+		}
+		&::before{
+			top: 0;
+		}
+		&::after{
+			bottom: 0;
+		}
+		span{
+			position: absolute;
+			background-color: $black;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			top: 9px;
+			transition: all .3s;
+		}
+	}
+	.header__wrapper{
+		position: relative;
+	}
+	.header .menu{
+		display: none;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		width: 300px;
+		height: 350px;
+		background-color: rgba(255,255,255,0.9);
+		text-align: left;
+		
+	}
+	.header .menu li+li{
+		margin-left: 0;
+
+	}
+	.header .menu li{
+		margin-bottom: 30px;
+		
+		padding-left: 20px;
+	}
+	.header .menu li:first-child{
+		padding-top: 80px;
+	}
+	.readmore{
+		display: none;
+	}
+}
+
+@media(max-width: 930px){
+	.about__wrapper{
+		display: block;
+	}
+	.about-right__wrapper{
+		display: none;
+	}
+	.about__wrapper .about-left{
+		width: 100%;
+	}
+	.blue-screen .blue-screen-right h1 {
+	    font-size: 36px;
+	    
+	}
+	.blue-screen .blue-screen-right .screen-list li {
+	    font-size: 20px;
+	}
+	.blue-screen, .lblue-screen {
+		height: 610px;
+	}
+	.howitworks__wrapper{
+		flex-wrap: wrap;
+	}
+	.howitworks-item{
+		padding-top: 20px;
+	}
+	.footer-col{
+		padding-right: 30px;
+	}
+	.footer__wrapper{
+		flex-wrap: wrap;
+	}
+	.footer .logo{
+		margin-bottom: 30px;
+	}
+}
+@media(max-width: 730px){
+	.screen__wrapper{
+		display: block;
+	}
+	.blue-screen {
+	    width: 100%;
+	 }
+	 .lblue-screen{
+	 	display: none;
+	 }
+	 .hidden-image{
+	 	display: block;
+	 	text-align: center;
+	 	padding-top: 30px;
+	 	img{
+	 		width: 300px;
+	 	}
+	 }
+	 .blue-screen .blue-screen-right h1 {
+	 	margin-top: 50px;
+	 }
+	 .about, .advantages {
+	    padding: 50px 0;
+	}
+	.advantages__wrapper {
+		padding-bottom: 50px;
+	}
+	.whatbuy {
+		padding-top: 50px;
+	}
+	.advantages__wrapper {
+		padding-bottom: 50px;
+	}
+	.about-more__wrapper{
+		display: block;
+	}
+	.about-more__info {
+	    padding-left: 0;
+	    width: 100%;
+	}
+	h2{
+		font-size: 24px;
+	}
+	.whatbuy .item {
+	    margin-bottom: 30px;
+	}
+	.blue-screen {
+	    height: 740px;
+	}
+	.advantages__wrapper{
+		display: block;
+	}
+	.advantages__wrapper .advantages-left,
+	.advantages__wrapper .advantages-right {
+		width: 100%;
+		padding-left: 0;
+	}
+	.skupka-form__wrapper{
+		display: block;
+	}
+	.skupka-form-data,
+	.skupka-form__wrapper .skupka-form-image{
+		width: 100%;
+	}
+	.skupka-form-data {
+    	padding: 50px 20px;
+    }
+    .skupka-form__wrapper input{
+    	width: 280px;
+    }
+    .footer {
+	    padding: 50px 0;
+	    background-color: #22208D;
+	}
+}
+
+@media(max-width: 660px){
+	.whatbuy .items{
+		justify-content: center;
+	}
+	.blue-screen .blue-screen-right h1 {
+		margin: 40px 0;
+	}
+	.skupka-form__wrapper .skupka-form-image{
+    	height: 300px;
+    }
+}
+@media(max-width: 530px){
+	.howitworks__wrapper{
+		justify-content: center;
+	}
+
+}
+@media(max-width: 365px){
+	.blue-screen {
+	    height: 800px;
+	}
+}

@@ -66,6 +66,20 @@ html{
 	
 	.menu-burger{
 		display: none;
+		margin-right: 30px;
+		cursor: pointer;
+		color: $black;
+		&.active::before{
+			transform: rotate(45deg);
+			top: 9px;
+		}
+		&.active::after{
+			transform: rotate(-45deg);
+			bottom: 9px;
+		}
+		&.active span{
+			transform: scale(0);
+		}
 	}
 	.menu{
 		display: flex;
@@ -79,19 +93,38 @@ html{
 			text-decoration: none;
 			font-family: 'Montserrat', sans-serif;
 			font-size: 18px;
-			font-weight: 500;
-			transition: all 0.3s;
-			&:hover{
-				color: $blue;
-
+			font-weight: 500;			
+		}
+		li{
+			position: relative;
+			&::after{
+				  content:"";
+				  display:block;
+				  width:0;
+				  height:2px;
+				  position: absolute;
+				  bottom:0; 
+				  right:0; 
+				  left:100%;
+				  border-bottom:2px solid $black;
+				  transition:all .2s linear;
+				  
+			}
+			&:hover::after{
+				width:100%;
+  				left:0;
 			}
 		}
 	}
-	.header__phone{
+	.header__phone a{
 		font-family: 'Montserrat', sans-serif;
 		font-size: 24px;
 		font-weight: 500;
 		color: $orange;
+		transition: all 0.3s;
+			&:hover{
+				color: #BB7000;
+			}
 	}
 }
 .logo{
@@ -104,6 +137,9 @@ html{
 	}
 	.logo-blue{
 		color: $blue;
+	}
+	.logo-white{
+		color: #fff;
 	}
 //-------------------------First Screen-----------------------
 .header-screen{
@@ -121,7 +157,7 @@ html{
 	color: #fff;
 	display: flex;
 	justify-content: end;
-	padding-bottom: 130px;
+	height: 720px;
 	.blue-screen-right{
 		width: 640px;
 		
@@ -162,6 +198,10 @@ html{
 			border: 1px solid #fff;
 			border-radius: 5px;
 			margin-left: 30px;
+			transition: all 0.3s;
+			&:hover{
+				color:  #DFDFDF;
+			}
 		}
 	}
 	
@@ -172,14 +212,14 @@ html{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100%;
-	padding-bottom: 120px;
+	height: 720px;
+	
 }
 .screen-image{
 	width: 700px;
 	img{
-		max-width: 100%;
-		height: auto;
+		height: 100%;
+		width: auto;
 	}
 }
 .order, .skupka{
@@ -187,7 +227,14 @@ html{
 			background-color: $orange;
 			color: #fff;
 			border-radius: 5px;
+			transition: all 0.3s;
+			&:hover{
+				background-color: #BB7000;
+			}
 		}
+.hidden-image{
+	display: none;
+}
 //----------------------ABOUT--------------------------
 h2{
 	font-family: 'Montserrat', sans-serif;
@@ -210,6 +257,9 @@ h2{
 		padding-left: 60px;
 		width: 50%;
 	}
+}
+.about-right__wrapper img{
+
 }
 .about-text{
 	margin-top: 20px;
@@ -402,6 +452,35 @@ h2{
 	width: 100%;
 	color: #DFDFDF;
 }
+.footer-list{
+	margin-top: 30px;
+	li{
+		margin-bottom: 20px;
+		a{
+			color: #DFDFDF;
+			text-decoration: underline;
+			transition: all 0.3s;
+			&:hover{
+				color: $orange;
+			}
+		}
+	}
+}
+.social-links{
+	display: flex;
+	justify-content: end;
+	flex-direction: column;
+	a{
+		margin-bottom: 20px;
+		transition:all 0.3s;
+	}
+}
+
+
+
 .note{
 	height: 50px;
 }
+
+
+@import 'media';
