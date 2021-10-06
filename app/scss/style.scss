@@ -33,14 +33,14 @@ html, body{
 	color: $black;
 }
 body{
+	width: 100%;
 	overflow-x: hidden;
 	background-color: #fff;
-	&.lock{
-		overflow: hidden;
-	}
+	
 }
 html{
-	position: relative;
+	width: 100%;
+	overflow-x: hidden;
 }
 .container{
 	max-width: 1300px;
@@ -51,7 +51,7 @@ html{
 //--------------------HEADER--------------------------
 .header{
 	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.13);
-	width: 100%;
+	width: 100vw;
 	position: fixed;
 	background-color: #fff;
 	z-index: 10;
@@ -258,9 +258,7 @@ h2{
 		width: 50%;
 	}
 }
-.about-right__wrapper img{
 
-}
 .about-text{
 	margin-top: 20px;
 }
@@ -427,6 +425,10 @@ h2{
 			height: 100%;
 		}
 	}
+}
+.skupka-form-image{
+	overflow-x: hidden;
+	overflow-y: hidden;
 }
 
 .skupka-form-data__wrapper{
